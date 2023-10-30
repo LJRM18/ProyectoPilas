@@ -34,7 +34,7 @@
           <MenuItem fx:id="menorprecio" mnemonicParsing="false" text="Menor precio" />
         </items>
       </MenuButton>
-      <Button fx:id="registrar" layoutX="361.0" layoutY="70.0" mnemonicParsing="false" text="Registrar" />
+      <Button fx:id="registrar" defaultButton="true" layoutX="361.0" layoutY="70.0" mnemonicParsing="false" onAction="#actionevent" text="Registrar" />
       <TableView fx:id="tabla" layoutX="34.0" layoutY="123.0" prefHeight="251.0" prefWidth="640.0">
         <columns>
           <TableColumn fx:id="id" prefWidth="128.0" text="ID" />
@@ -44,11 +44,11 @@
             <TableColumn fx:id="preciou" prefWidth="128.0" text="Precio" />
         </columns>
       </TableView>
-      <Button fx:id="cerrar" layoutX="622.0" layoutY="384.0" mnemonicParsing="false" text="Cerrar" />
-      <Button fx:id="menos10" layoutX="131.0" layoutY="384.0" mnemonicParsing="false" text="-10" />
-      <Button fx:id="menos1" layoutX="169.0" layoutY="384.0" mnemonicParsing="false" text="-1" />
-      <Button fx:id="mas1" layoutX="203.0" layoutY="384.0" mnemonicParsing="false" text="+1" />
-      <Button fx:id="mas10" layoutX="243.0" layoutY="384.0" mnemonicParsing="false" text="+10" />
+      <Button fx:id="cerrar" layoutX="622.0" layoutY="384.0" mnemonicParsing="false" onAction="#actionevent" text="Cerrar" />
+      <Button fx:id="menos10" layoutX="131.0" layoutY="384.0" mnemonicParsing="false" onAction="#actionevent" text="-10" />
+      <Button fx:id="menos1" layoutX="169.0" layoutY="384.0" mnemonicParsing="false" onAction="#actionevent" text="-1" />
+      <Button fx:id="mas1" layoutX="203.0" layoutY="384.0" mnemonicParsing="false" onAction="#actionevent" text="+1" />
+      <Button fx:id="mas10" layoutX="243.0" layoutY="384.0" mnemonicParsing="false" onAction="#actionevent" text="+10" />
       <Label layoutX="34.0" layoutY="388.0" text="Cambiar fecha" />
    </children>
 </AnchorPane>

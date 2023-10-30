@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -47,6 +48,85 @@ public class PrincipalController implements Initializable {
     
     @FXML
     private TextField idt, nomt, preciot, fechalt, fechavt;
+    
+    @FXML
+    private MenuItem idb, nomb, preciob, fechalb, fechavb, promedio, mayorpromedio, menorpromedio, mayorprecio, menorprecio;
+    
+    @FXML
+    private void actionevent (ActionEvent e){
+        Object evt = e.getSource();
+        if(evt.equals(registrar)){
+            producto produ = new producto(idt.getText(), nomt.getText(), fechalt.getText()
+                    , fechavt.getText(), Float.parseFloat(preciot.getText()));
+            lista.setPushProducto(produ);
+            idt.setText("");
+            nomt.setText("");
+            preciot.setText("");
+        }
+            if(evt.equals(menos10)){
+            calendario.add(Calendar.DATE, -10);
+            dia = calendario.get(Calendar.DATE);
+            mes = calendario.get(Calendar.MONTH);
+            año = calendario.get(Calendar.YEAR);
+            fechalt.setText(String.valueOf(dia) + "/" + String.valueOf(mes+1) + "/" + String.valueOf(año));
+            calendario.add(Calendar.DATE, 31);
+            diav = calendario.get(Calendar.DATE);
+            mesv = calendario.get(Calendar.MONTH);
+            añov = calendario.get(Calendar.YEAR);
+            fechavt.setText(String.valueOf(diav) + "/" + String.valueOf(mesv+1) + "/" + String.valueOf(añov));
+            calendario.add(Calendar.DATE, -31);
+            fecha = String.valueOf(dia) + "/" + String.valueOf(mes+1) + "/" + String.valueOf(año);
+            lista.eliminarprodu();
+        }
+        if(evt.equals(menos1)){
+            calendario.add(Calendar.DATE, -1);
+            dia = calendario.get(Calendar.DATE);
+            mes = calendario.get(Calendar.MONTH);
+            año = calendario.get(Calendar.YEAR);
+            fechalt.setText(String.valueOf(dia) + "/" + String.valueOf(mes+1) + "/" + String.valueOf(año));
+            calendario.add(Calendar.DATE, 31);
+            diav = calendario.get(Calendar.DATE);
+            mesv = calendario.get(Calendar.MONTH);
+            añov = calendario.get(Calendar.YEAR);
+            fechavt.setText(String.valueOf(diav) + "/" + String.valueOf(mesv+1) + "/" + String.valueOf(añov));
+            calendario.add(Calendar.DATE, -31);
+            fecha = String.valueOf(dia) + "/" + String.valueOf(mes+1) + "/" + String.valueOf(año);
+            lista.eliminarprodu();
+        }
+        if(evt.equals(mas1)){
+            calendario.add(Calendar.DATE, 1);
+            dia = calendario.get(Calendar.DATE);
+            mes = calendario.get(Calendar.MONTH);
+            año = calendario.get(Calendar.YEAR);
+            fechalt.setText(String.valueOf(dia) + "/" + String.valueOf(mes+1) + "/" + String.valueOf(año));
+            calendario.add(Calendar.DATE, 31);
+            diav = calendario.get(Calendar.DATE);
+            mesv = calendario.get(Calendar.MONTH);
+            añov = calendario.get(Calendar.YEAR);
+            fechavt.setText(String.valueOf(diav) + "/" + String.valueOf(mesv+1) + "/" + String.valueOf(añov));
+            calendario.add(Calendar.DATE, -31);
+            fecha = String.valueOf(dia) + "/" + String.valueOf(mes+1) + "/" + String.valueOf(año);
+            lista.eliminarprodu();
+        }
+        if(evt.equals(mas10)){
+            calendario.add(Calendar.DATE, 10);
+            dia = calendario.get(Calendar.DATE);
+            mes = calendario.get(Calendar.MONTH);
+            año = calendario.get(Calendar.YEAR);
+            fechalt.setText(String.valueOf(dia) + "/" + String.valueOf(mes+1) + "/" + String.valueOf(año));
+            calendario.add(Calendar.DATE, 31);
+            diav = calendario.get(Calendar.DATE);
+            mesv = calendario.get(Calendar.MONTH);
+            añov = calendario.get(Calendar.YEAR);
+            fechavt.setText(String.valueOf(diav) + "/" + String.valueOf(mesv+1) + "/" + String.valueOf(añov));
+            calendario.add(Calendar.DATE, -31);
+            fecha = String.valueOf(dia) + "/" + String.valueOf(mes+1) + "/" + String.valueOf(año);
+            lista.eliminarprodu();
+        }
+        if(evt.equals(cerrar)){
+            System.exit(0);
+        }
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
