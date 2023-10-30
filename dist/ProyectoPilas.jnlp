@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="ProyectoPilas.jar" size="8141" download="eager" />
+    <jar href="ProyectoPilas.jar" size="8823" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="proyectopilas.main"  name="ProyectoPilas" />
   <update check="always"/>

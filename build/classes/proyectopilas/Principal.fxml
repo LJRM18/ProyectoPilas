@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="688.0" style="-fx-background-color: #6467B8;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="proyectopilas.PrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="688.0" style="-fx-background-color: #6467B8;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectopilas.PrincipalController">
    <children>
       <TextField fx:id="idt" layoutX="34.0" layoutY="30.0" promptText="ID" />
       <TextField fx:id="fechalt" disable="true" editable="false" layoutX="34.0" layoutY="70.0" />
@@ -27,11 +27,11 @@
       </MenuButton>
       <MenuButton layoutX="575.0" layoutY="70.0" mnemonicParsing="false" text="Promediar">
         <items>
-          <MenuItem fx:id="promedio" mnemonicParsing="false" text="Promedio" />
-            <MenuItem fx:id="mayorpromedio" mnemonicParsing="false" text="Mayor al promedio" />
-            <MenuItem fx:id="menorpromedio" mnemonicParsing="false" text="Menor al promedio" />
-            <MenuItem fx:id="mayorprecio" mnemonicParsing="false" text="Mayor precio" />
-          <MenuItem fx:id="menorprecio" mnemonicParsing="false" text="Menor precio" />
+          <MenuItem fx:id="promedio" mnemonicParsing="false" onAction="#actionevent" text="Promedio" />
+            <MenuItem fx:id="mayorpromedio" mnemonicParsing="false" onAction="#actionevent" text="Mayor al promedio" />
+            <MenuItem fx:id="menorpromedio" mnemonicParsing="false" onAction="#actionevent" text="Menor al promedio" />
+            <MenuItem fx:id="mayorprecio" mnemonicParsing="false" onAction="#actionevent" text="Mayor precio" />
+          <MenuItem fx:id="menorprecio" mnemonicParsing="false" onAction="#actionevent" text="Menor precio" />
         </items>
       </MenuButton>
       <Button fx:id="registrar" defaultButton="true" layoutX="361.0" layoutY="70.0" mnemonicParsing="false" onAction="#actionevent" text="Registrar" />
