@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectopilas.PrincipalController">
-    <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
-    </children>
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="688.0" style="-fx-background-color: #6467B8;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="proyectopilas.PrincipalController">
+   <children>
+      <TextField fx:id="idt" layoutX="34.0" layoutY="30.0" promptText="ID" />
+      <TextField fx:id="fechalt" disable="true" editable="false" layoutX="34.0" layoutY="70.0" />
+      <TextField fx:id="nomt" layoutX="195.0" layoutY="30.0" promptText="Nombre" />
+      <TextField fx:id="fechavt" disable="true" editable="false" layoutX="195.0" layoutY="70.0" />
+      <TextField fx:id="preciot" layoutX="361.0" layoutY="30.0" promptText="Precio" />
+      <MenuButton layoutX="575.0" layoutY="30.0" mnemonicParsing="false" text="Buscar">
+        <items>
+          <MenuItem fx:id="idb" mnemonicParsing="false" text="ID" />
+            <MenuItem fx:id="nomb" mnemonicParsing="false" text="Nombre" />
+            <MenuItem fx:id="fechalb" mnemonicParsing="false" text="Fecha lote" />
+            <MenuItem fx:id="fechavb" mnemonicParsing="false" text="Fecha vencimiento" />
+          <MenuItem fx:id="preciob" mnemonicParsing="false" text="Precio" />
+        </items>
+      </MenuButton>
+      <MenuButton layoutX="575.0" layoutY="70.0" mnemonicParsing="false" text="Promediar">
+        <items>
+          <MenuItem fx:id="promedio" mnemonicParsing="false" text="Promedio" />
+            <MenuItem fx:id="mayorpromedio" mnemonicParsing="false" text="Mayor al promedio" />
+            <MenuItem fx:id="menorpromedio" mnemonicParsing="false" text="Menor al promedio" />
+            <MenuItem fx:id="mayorprecio" mnemonicParsing="false" text="Mayor precio" />
+          <MenuItem fx:id="menorprecio" mnemonicParsing="false" text="Menor precio" />
+        </items>
+      </MenuButton>
+      <Button fx:id="registrar" layoutX="361.0" layoutY="70.0" mnemonicParsing="false" text="Registrar" />
+      <TableView fx:id="tabla" layoutX="34.0" layoutY="123.0" prefHeight="251.0" prefWidth="640.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="128.0" text="ID" />
+          <TableColumn fx:id="nom" prefWidth="128.0" text="Nombre" />
+            <TableColumn fx:id="fechal" prefWidth="128.0" text="Fecha Lote" />
+            <TableColumn fx:id="fechav" prefWidth="128.0" text="Fecha Vencimiento" />
+            <TableColumn fx:id="preciou" prefWidth="128.0" text="Precio" />
+        </columns>
+      </TableView>
+      <Button fx:id="cerrar" layoutX="622.0" layoutY="384.0" mnemonicParsing="false" text="Cerrar" />
+      <Button fx:id="menos10" layoutX="131.0" layoutY="384.0" mnemonicParsing="false" text="-10" />
+      <Button fx:id="menos1" layoutX="169.0" layoutY="384.0" mnemonicParsing="false" text="-1" />
+      <Button fx:id="mas1" layoutX="203.0" layoutY="384.0" mnemonicParsing="false" text="+1" />
+      <Button fx:id="mas10" layoutX="243.0" layoutY="384.0" mnemonicParsing="false" text="+10" />
+      <Label layoutX="34.0" layoutY="388.0" text="Cambiar fecha" />
+   </children>
 </AnchorPane>
