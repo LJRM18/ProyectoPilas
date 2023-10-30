@@ -44,7 +44,7 @@ public class pila {
         nomprodu = null;
         return nomprodu;
     }
-        public void eliminarprodu(){
+    public void eliminarprodu(){
         String fecha = PrincipalController.fecha;
         producto eliminar = new producto();
         for (producto lista : pila){
@@ -67,5 +67,41 @@ public class pila {
         }
         aux = null;
         return aux;
+    }
+    public void buscarFechal(String fechal){
+        for(producto fecha : pila){
+            if(fecha.fechal.equals(fechal)){
+                JOptionPane.showMessageDialog(null, "El producto con la fecha lote buscada es:\n"
+                                                    + "ID: " + fecha.id + "\n"
+                                                    + "Nombre: " + fecha.nom + "\n"
+                                                    + "Fecha lote: " + fecha.fechal + "\n"
+                                                    + "Fecha vencimiento: " + fecha.fechav + "\n"
+                                                    + "Precio: " + fecha.preciou);
+            }
+        }
+    }
+    public void buscarFechav(String fechav){
+        for(producto fecha : pila){
+            if(fecha.fechav.equals(fechav)){
+                JOptionPane.showMessageDialog(null, "El producto con la fecha de vencimiento buscada es:\n"
+                                                    + "ID: " + fecha.id + "\n"
+                                                    + "Nombre: " + fecha.nom + "\n"
+                                                    + "Fecha lote: " + fecha.fechal + "\n"
+                                                    + "Fecha vencimiento: " + fecha.fechav + "\n"
+                                                    + "Precio: " + fecha.preciou);
+            }
+        }
+    }
+    public void buscarprecio(float precio){
+        for(producto preciob : pila){
+            if(preciob.preciou == (precio)){
+                JOptionPane.showMessageDialog(null, "El producto con el precio buscado es:\n"
+                                                    + "ID: " + preciob.id + "\n"
+                                                    + "Nombre: " + preciob.nom + "\n"
+                                                    + "Fecha lote: " + preciob.fechal + "\n"
+                                                    + "Fecha vencimiento: " + preciob.fechav + "\n"
+                                                    + "Precio: " + preciob.preciou);
+            }
+        }
     }
 }

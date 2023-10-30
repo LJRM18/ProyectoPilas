@@ -17,6 +17,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javax.swing.JOptionPane;
 
 public class PrincipalController implements Initializable {
     
@@ -62,6 +63,42 @@ public class PrincipalController implements Initializable {
             idt.setText("");
             nomt.setText("");
             preciot.setText("");
+        }
+        if(evt.equals(idb)){
+            String id = JOptionPane.showInputDialog("Ingrese el ID de producto que desea buscar:");
+            if (lista.sacarid(id) != null){
+                producto buscar = lista.sacarid(id);
+                JOptionPane.showMessageDialog(null, "El producto con el ID buscado es:\n"
+                                                    + "ID: " + buscar.id + "\n"
+                                                    + "Nombre: " + buscar.nom + "\n"
+                                                    + "Fecha lote: " + buscar.fechal + "\n"
+                                                    + "Fecha vencimiento: " + buscar.fechav + "\n"
+                                                    + "Precio: " + buscar.preciou);
+            }
+        }
+        if(evt.equals(nomb)){
+            String nom = JOptionPane.showInputDialog("Ingrese el nombre de producto que desea buscar:");
+            if (lista.sacarnombre(nom) != null){
+                producto buscar = lista.sacarnombre(nom);
+                JOptionPane.showMessageDialog(null, "El producto con el nombre buscado es:\n"
+                                                    + "ID: " + buscar.id + "\n"
+                                                    + "Nombre: " + buscar.nom + "\n"
+                                                    + "Fecha lote: " + buscar.fechal + "\n"
+                                                    + "Fecha vencimiento: " + buscar.fechav + "\n"
+                                                    + "Precio: " + buscar.preciou);
+            }
+        }
+        if(evt.equals(fechalb)){
+            String fechal = JOptionPane.showInputDialog("Ingrese la fecha lote que desea buscar");
+            lista.buscarFechal(fechal);
+        }
+        if(evt.equals(fechavb)){
+            String fechav = JOptionPane.showInputDialog("Ingrese la fecha de vencimiento que desea buscar");
+            lista.buscarFechav(fechav);
+        }
+        if(evt.equals(preciob)){
+            float precio = Float.parseFloat(JOptionPane.showInputDialog("Ingrese el precio del producto que desea buscar"));
+            lista.buscarprecio(precio);
         }
             if(evt.equals(menos10)){
             calendario.add(Calendar.DATE, -10);

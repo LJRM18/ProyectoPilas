@@ -18,11 +18,11 @@
       <TextField fx:id="preciot" layoutX="361.0" layoutY="30.0" promptText="Precio" />
       <MenuButton layoutX="575.0" layoutY="30.0" mnemonicParsing="false" text="Buscar">
         <items>
-          <MenuItem fx:id="idb" mnemonicParsing="false" text="ID" />
-            <MenuItem fx:id="nomb" mnemonicParsing="false" text="Nombre" />
-            <MenuItem fx:id="fechalb" mnemonicParsing="false" text="Fecha lote" />
-            <MenuItem fx:id="fechavb" mnemonicParsing="false" text="Fecha vencimiento" />
-          <MenuItem fx:id="preciob" mnemonicParsing="false" text="Precio" />
+          <MenuItem fx:id="idb" mnemonicParsing="false" onAction="#actionevent" text="ID" />
+            <MenuItem fx:id="nomb" mnemonicParsing="false" onAction="#actionevent" text="Nombre" />
+            <MenuItem fx:id="fechalb" mnemonicParsing="false" onAction="#actionevent" text="Fecha lote" />
+            <MenuItem fx:id="fechavb" mnemonicParsing="false" onAction="#actionevent" text="Fecha vencimiento" />
+          <MenuItem fx:id="preciob" mnemonicParsing="false" onAction="#actionevent" text="Precio" />
         </items>
       </MenuButton>
       <MenuButton layoutX="575.0" layoutY="70.0" mnemonicParsing="false" text="Promediar">
